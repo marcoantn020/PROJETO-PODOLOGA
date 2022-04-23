@@ -1,0 +1,53 @@
+.inputGroup {
+    display: flex;
+  }
+  
+  .prefixSpan {
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    background-color: #eee;
+    border: 1px solid #ccc;
+  }
+  
+  .input {
+    flex: 1;
+    font-size: 1rem;
+    padding: 9px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px!important;
+    color:rgb(33, 30, 30);
+  }
+
+  .input:focus {
+    border: 1px solid rgb(46, 46, 250);
+  }
+
+  .input:hover {
+    border: 1px solid black;
+  }
+
+  .label {
+    color: gray;
+    font-size: 0.9rem;
+    margin-left: 5px;
+    flex: 1;
+  }
+  
+  .prefix > input {
+    border-radius: 2px 4px 4px 0px;
+  }
+  
+  .prefix .prefixSpan {
+    border-right: 0;
+    border-radius: 4px 0px 0px 4px;
+  }
+
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputGroup + .inputGroup {
+    margin-top: 15px;
+  }

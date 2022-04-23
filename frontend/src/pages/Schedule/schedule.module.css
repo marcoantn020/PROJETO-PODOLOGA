@@ -1,0 +1,215 @@
+.box_container {
+  width: 100%;
+  max-width:1024px;
+  padding: 0 2rem 1rem 2rem;
+  margin: 0 auto;
+}
+
+.containerPrincipal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .calendar {
+    box-sizing: border-box;
+    font-size: 1rem;
+    width: 56%;
+    margin: 0 auto;
+  
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 1px rgb(26, 23, 23);
+  }
+  
+  .header {
+    background-color: #3f51b5;
+    text-align: center;
+    min-height: 2rem;
+    line-height: 2rem;
+    color: white;
+    /* color: rgb(0, 0, 0); */
+    font-weight: 700;
+    display: flex;
+  
+    letter-spacing: 0.1rem;
+  }
+  
+  .dayNames {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  
+  .body {
+    border: none;
+  }
+  
+  .previous {
+    width: 10%;
+    text-align: left;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+  
+  .previous:hover {
+    color: white;
+  }
+  
+  .current {
+    flex: 1;
+  }
+  
+  .next {
+    width: 10%;
+    text-align: right;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  .next:hover {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .week {
+    background-color: white;
+    width: calc(100% / 7);
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(32, 27, 27);;
+    font-weight: 400;
+  }
+  .week div {
+    width: 100%;
+  }
+  
+  .day {
+    position: relative;
+    width: calc(100% / 7);
+    height: 44px;
+    display: inline-block;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 1;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .day div {
+    margin: 0 auto;
+  
+    width: 54px;
+    height: 44px;
+    position: relative;
+    color: rgb(32, 27, 27);
+    z-index: 100;
+    line-height: 44px;
+  }
+  
+  .before {
+    color: gray!important;
+  }
+  
+  .selected {
+    background-color: rgb(206, 59, 59);
+    color: white!important;
+    font-weight: bold;
+  }
+  
+  .today {
+    background-color: rgb(205, 205, 205);
+  }
+  
+  .tasksOfDay {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    /* margin: 2rem auto 0; */
+  
+    width: 39%;
+
+    background-color: white;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  
+    box-shadow: 0 0 2px 1px rgb(20, 19, 19);
+  }
+  
+  .tasksOfDay h3 {
+    color: rgb(22, 19, 19);
+    margin-bottom: 0.5rem;
+  }
+  
+  .tasksOfDay li {
+    display: flex;
+    align-items: center;
+    color: rgb(22, 19, 19);
+    list-style: none;
+    border-bottom: 1px solid;
+    margin-bottom: 1px;
+    height: 1.8rem;
+  }
+  
+  .tasksOfDay li:hover {
+    background-color: lightgray;
+  }
+  
+  .tasksOfDay form {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+  }
+  
+  .tasksOfDay input {
+    width: 75%;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid ;
+    border-right: none;
+    border-radius: 2px 0 0 2px ;
+  }
+  
+  .tasksOfDay input[type=submit] {
+    width: 25%;
+    background: #3f51b5;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    padding: 0 1rem;
+    height: 2rem;
+  }
+  
+  .tasksOfDay input[type=submit]:hover {
+    opacity: 0.9;
+  }
+
+  .tasksCalendarChekbox {
+    width: 10px;
+    height: 10px;
+  }
+
+  @media screen and (max-width: 800px) {
+    .containerPrincipal {
+      flex-direction: column;
+    }
+
+    .calendar {
+      width: 90%;
+    }
+
+    .tasksOfDay {
+      margin: 2rem auto 0;
+      width: 90%;
+    }
+  }

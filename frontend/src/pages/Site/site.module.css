@@ -1,0 +1,229 @@
+
+
+.container {
+    height: 100%;
+    color: rgb(28, 22, 22);
+    padding-top: 3rem;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(86, 86, 250);
+    height: 3rem;
+    line-height: 1.5rem;
+}
+
+.nav .brand {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+}
+
+.nav a {
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.nav .ul > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 300px;
+}
+
+.nav .ul > ul > li {
+    list-style: none;
+}
+
+
+.banner {
+    color: white;
+    width: 100%;
+    height: 300px;
+    background-color: rgb(73, 53, 53);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxBanner {
+    display: flex;
+    flex-direction: column;
+}
+
+.boxBanner .photo {
+    height: 10rem;
+    width: 10rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: yellowgreen;
+}
+
+.boxBanner h3 {
+    text-align: center;
+}
+
+.boxBanner p {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.attendance {
+    width: 100%;
+    min-height: 350px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.attendance h3 {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.containerAttendance {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.boxAttendance {
+    max-width: 350px;
+    width: 33%;
+    height: auto;
+    padding: 0.5rem 1rem;
+
+    border: 15px solid transparent;
+}
+
+.line {
+    border: none;
+    box-shadow: 0 0 2px 1px black;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+}
+
+.boxAttendance .imgAttendance {
+    width: 100%;
+    height: 7rem;
+    border-radius: 3px;
+    background-color: gray;
+}
+
+.boxAttendance  h4 {
+    text-align: center;
+    color: black;
+}
+
+.boxAttendanc p {
+    text-align: justify;
+    font-size: 9px!important;
+}
+
+.about {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(73, 53, 53);
+    padding: 3rem 0;
+}
+
+.about h3 {
+    text-align: center;
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+
+.boxAbout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.boxAbout p {
+    width: 70%;
+    text-align: center;
+}
+
+.something {
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.location {
+    text-align: center;
+    box-shadow: 0 0 2px 1px rgb(22, 22, 22);
+    padding: 0.2rem 2rem;
+    border-radius: 3px;
+}
+
+.location h5 {
+    font-size: 1.1rem;
+}
+
+.location p {
+    font-size: 0.9rem;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 400px;
+    box-shadow: 0 0 2px 1px rgb(22, 22, 22);
+    padding: 1rem;
+    border-radius: 3px;
+}
+
+.socialMedia > div {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: chocolate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.info {
+    text-align: center;
+    box-shadow: 0 0 2px 1px rgb(22, 22, 22);
+    padding: 0.2rem 2rem;
+    border-radius: 3px;
+}
+
+.info h5 {
+    font-size: 1.1rem;
+}
+
+.info p {
+    font-size: 0.9rem;
+}
+
+.container > p {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 0.7rem;
+}

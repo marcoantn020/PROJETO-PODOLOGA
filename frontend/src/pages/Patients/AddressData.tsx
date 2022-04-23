@@ -1,0 +1,105 @@
+import { ChangeEvent, FormEvent, useCallback, useState } from 'react';
+import { TextField, Button } from '@material-ui/core';
+import { DataUsers, IProps } from '../../services/Interfaces';
+import { BoxButton } from '../../components/Styled';
+
+
+const AddressData = ({ submitForm, comeBack }: IProps) => {
+    const [user, setUser] = useState<DataUsers>({} as DataUsers);
+    // const [errors, setErrors] = useState({ name: { validate: true, message: "" } });
+
+    const handleChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
+        setUser({
+            ...user,
+            [event.currentTarget.name]: event.currentTarget.value
+        });
+    }, [user]);
+
+    function handleSubmit(event: FormEvent) {
+        event.preventDefault();
+        submitForm(user);
+    }
+
+    return (
+        <>
+
+            <form onSubmit={handleSubmit}>
+                <TextField
+                    onChange={handleChange}
+                    name="zipCode"
+                    label="CEP"
+                    variant="outlined"
+                    size="small"
+                    placeholder="17560-000"
+                    margin="normal"
+                    required
+                />
+
+                <TextField
+                    onChange={handleChange}
+                    name="address"
+                    size="small"
+                    label="Endereço"
+                    margin="normal"
+                    variant="outlined"
+                    fullWidth
+                    required
+                />
+
+                <TextField
+                    onChange={handleChange}
+                    name="number"
+                    size="small"
+                    label="Numero"
+                    margin="normal"
+                    variant="outlined"
+                    style={{ marginRight: "10px" }}
+                    required
+                />
+
+                <TextField
+                    onChange={handleChange}
+                    name="district"
+                    size="small"
+                    label="Bairro"
+                    margin="normal"
+                    variant="outlined"
+                    required
+                /> <br />
+
+                <TextField
+                    onChange={handleChange}
+                    name="city"
+                    label="Cidade"
+                    variant="outlined"
+                    size="small"
+                    placeholder="Marilia"
+                    margin="normal"
+                    required
+                /> <br />
+
+                <BoxButton>
+                    <Button
+                        className="buttonColor"
+                        onClick={comeBack}
+                        type="button"
+                        variant="contained"
+                        size="small">
+                        voltar
+                    </Button>
+
+                    <Button
+                        type="submit"
+                        variant="contained"
+                        size="small"
+                        color="primary">
+                        proximo
+                </Button>
+                </BoxButton>
+            </form>
+        </>
+
+    );
+}
+
+export default AddressData;
